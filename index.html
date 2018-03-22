@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> NYCWakeUpCall
+	</title>
+
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+	 <!-- jquery -->
+	<script src="js/a.jquery.min.js"></script>
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/nivo-lightbox.css" rel="stylesheet" />
+	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+	<link href="css/animations.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+	<link href="color/default.css" rel="stylesheet">
+	<link href="css/customcontainer.css" rel="stylesheet">
+
+
+	<!-- High Chart -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/highcharts.js"></script>
+	<script src="js/exporting.js"></script>
+	<script src="js/data.js"></script>
+	<!-- High Chart -->
+
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+	<section class="hero" id="intro">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-right navicon">
+                  <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center ">
+
+						<h1> #NYCWakeUpCall </h1>
+						<h1> An Analysis of NYC311 Data </h1>
+
+			   </div>
+              </div>
+              <!-- optional button
+			  <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                  <a href="#about" class="learn-more-btn btn-scroll"> Overview </a>
+                </div>
+              </div>
+			  -->
+            </div>
+    </section>
+
+
+    <!-- Navigation -->
+    <div id="navigation">
+        <nav class="navbar navbar-custom" role="navigation">
+                              <div class="container">
+                                    <div class="row">
+                                          <div class="col-md-3">
+                                                   <div class="site-logo">
+                                                            <a href="index.html" class="brand"> #NYCWakeUpCall </a>
+                                                    </div>
+                                          </div>
+
+
+                                          <div class="col-md-9">
+
+                                                      <!-- Brand and toggle get grouped for better mobile display -->
+                                          <div class="navbar-header">
+                                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                                                <i class="fa fa-bars"></i>
+                                                </button>
+                                          </div>
+                                                      <!-- Collect the nav links, forms, and other content for toggling -->
+                                                      <div class="collapse navbar-collapse" id="menu">
+                                                            <ul class="nav navbar-nav navbar-right">
+
+																  <li><a href="#introduction"> Introduction </a></li>
+																  <li><a href="#methodology"> Methodology</a></li>
+																  <li><a href="#map"> map </a></li>
+																  <li><a href="#analysis"> Analysis </a></li>
+																   <li><a href="#datasources"> Data Sources</a></li>
+																  <li><a href="#team"> The Team </a></li>
+																<li><a href="#api"> API </a></li>
+                                                            </ul>
+                                                      </div>
+                                                      <!-- /.Navbar-collapse -->
+
+                                          </div>
+                                    </div>
+                              </div>
+                              <!-- /.container -->
+                        </nav>
+    </div>
+    <!-- /Navigation -->
+
+	<!-- Section: Introduction -->
+    <section id="introduction" class="home-section color-dark bg-white">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div>
+					<div class="animatedParent">
+					<div class="section-heading text-center animated bounceInDown">
+					<h2 class="h-bold"> Introduction </h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container-fluid">
+
+
+        <div class="row" style="height:90%">
+
+
+
+            <div class="col-lg-10 col-lg-offset-1 animatedParent">
+				<div class="text-center">
+					<p align="justify">
+						The NYC311 initiative was launched in 2003 by then-Mayor Michael Bloomberg as a clearinghouse for all government-related enquiries. Known as ‘the agency that never sleeps’, the NYC311 Call Center not only operates 24/7, but maintains a good service standard by treating all calls equally regardless of the time it is made.
+
+						In 2016 alone, NYC311 has received 36 million customer contacts; of which about 2.4 million was reported as service requests. A quick count revealed that this number has been increasing throughout the years. Service requests could be seen as an expression of dissatisfaction, or otherwise known as complaint, as it means that New Yorkers have to take the trouble to alert the government to solve issues.
+						<br/>
+						<br/>
+						</P>
+
+						<iframe src="https://cloud.highcharts.com/embed/uzukure" frameborder="0" style='height: 300px; width: 40%';" scrolling="no"></iframe>
+						<iframe src="https://cloud.highcharts.com/embed/yfapyca" frameborder="0" style='height: 300px; width: 59%';" scrolling="no"></iframe>
+						<br/>
+						<br/>
+						<p align="justify">
+						Just who are these people making the complaints? Where are they located at? When are people complaining? Various websites have attempted to provide visualisation using NYC311 open data:</P>
+						<ul style="list-style-type:none" align="center">
+
+							<li><a href="http://bl.ocks.org/nerik/raw/90c087a3f0fe96f8a2ce/#13/40.7948/-73.9030" target="_blank"> Mapping NYC311 Noise Complaints</a> - this site allows user to interactively explore various types of noise complaints on a map. </li>
+							<li><a href="http://www1.nyc.gov/apps/311srmap/" target="_blank"> NYC311 Data Exploration</a> - this site by NYC311 allows user to spatially view the total number of requests in each community district on a map.</li>
+							<li><a href="http://furmancenter.org/thestoop/entry/summer-of-311" target="_blank"> Summer of 311 </a> - this static map illustrates the most common complaint by neighbourhood. </li>
+						</ul>
+
+                          <p align="justify">
+						However, these sites do not allow users to interactively explore the NYC311 data according to its spatial and temporal distribution and at the neighbourhood level and do not display additional information on the neighbourhood.						Dissatisfaction is an antecedent of complaining but it along may not always drive a person to log a complaint (Landon, 1980). Income was found to be positively correlated to 	complaining behaviour (Warland, Hermann and Willitis, 1975). This website seeks to explore whether this finding holds for NYC by combining <a href="#datasources"> various data sources </a>. Using the <a href="#map">'Map'</a> section, you can interactively explore the complaints data and the affluence of the neighbourhoods using maps and charts. In the <a href="#analysis">'Analysis'</a> section, you can interactively explore the relationships between concentration of complaints made and affluence at the neighbourhood level, and the various clusters of complaints in NYC as a whole. </P>
+
+<p align="left">
+						Due to the sheer number and variety of complaints, this website will only explore the top 10 complaint types.
+						</p>
+						<iframe src="introduction/table.html" frameborder="0" style="position: relative; height: 250px; width: 70%;" scrolling="no" align="center"></iframe>
+							<p align="left">
+							<strong> References </strong></br>
+							<ul style="list-style-type:none" align="left">
+
+							<li> Landon, E.L. (1980) 'The direction of consumer complaint research', Advances in
+consumer research, 1980, 7, p. 335-338. </li>
+							<li> Warland, R.H. 'A typology of consumer complaints', in Day, R.L. (ed.) Consumer
+satisfaction, dissatisfaction and complaining behavior. Papers from a Marketing research
+Symposium, School of business, Indiana University, Bloomington, April 20-22 1977, p.
+144-147.</li>
+
+						</ul>
+						</p>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+		</div>
+
+
+	</section>
+	<!-- /Section: Introduction -->
+
+	<!-- Section: methodology -->
+    <section id="methodology" class="home-section color-dark bg-gray">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div>
+					<<div class="animatedParent">
+					<div class="section-heading text-center animated bounceInDown">
+					<h2 class="h-bold"> Methodology </h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container-fluid">
+
+
+        <div class="row" style="height:90%">
+
+
+
+            <div class="col-lg-10 col-lg-offset-1 animatedParent">
+				<div class="text-center">
+					<p>
+						<img src="img/method.png" style="width: 80%; height: 650px" >
+
+					</p>
+					<div class="row" style="height:10%; display:block;">
+
+					</div>
+            </div>
+
+
+        </div>
+		</div>
+
+
+	</section>
+	<!-- /Section: methodology -->
+
+	<!-- Section: map -->
+    <section id="map" class="home-section color-dark bg-white">
+		<div class="container marginbot-20">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div>
+					<div class="animatedParent">
+					<div class="section-heading text-center animated bounceInDown">
+					<h2 class="h-bold"> Map </h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container marginbot-10 margintop-10">
+				<div class="row col-lg-12">
+
+						<button id="2015" type="button" class="btn-sm btn-default" href="#">Interactive Cluster 2015</button>
+						<button id="2016" type="button" class="btn-sm btn-default" href="#">Interactive Cluster 2016</button>
+						<button id="income" type="button" class="btn-sm btn-default" href="#"> Income 2015 & 2016 </button>
+
+				</div>
+				<div class="row col-lg-6">
+
+				</div>
+
+			</div>
+
+
+			<div class="container">
+			<div class="row">
+			<div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+			<div id="map-container-carto" style='width: 100%; height: 100%;'>
+
+			<iframe id="mapcontainer" src="maps/map-container-total.html" style='border: 0; width: 100%; height: 610px'></iframe>
+
+			</div>
+			</div>
+			<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+
+
+				<iframe id="time-highchart" class='highcharts-iframe' src='https://cloud.highcharts.com/embed/ijimesa' style='border: 0; width: 100%; height: 300px'></iframe>
+
+				<div id="highchartbar">
+
+				<iframe id="bar-highchart" class='highcharts-iframe' src='https://cloud.highcharts.com/embed/yjememy' style='border: 0; width: 100%; height: 300px' allowfullscreen ></iframe>
+				</div>
+
+
+			</div>
+			</div>
+			</div>
+
+
+			<div class="container marginbot-20 margintop-10">
+				<div class="row col-lg-12" align="center">
+
+						<button id="Heating" type="button" class="btn-sm btn-default" >Heating</button>
+						<button id="Illegal Parking" type="button" class="btn-sm btn-default" href="#">Illegal Parking</button>
+						<button id="Blocked Driveway" type="button" class="btn-sm btn-default" href="#">Blocked Driveway</button>
+						<button id="Street Condition" type="button" class="btn-sm btn-default" href="#">Street Condition</button>
+						<button id="Unsanitary Condition" type="button" class="btn-sm btn-default" href="#">Unsanitary Condition</button>
+						<button id="Water System" type="button" class="btn-sm btn-default" href="#">Water System</button>
+						<button id="Paint Condition" type="button" class="btn-sm btn-default" href="#">Paint Condition</button>
+						<button id="Noise" type="button" class="btn-sm btn-default" href="#">Noise</button>
+						<button id="Street Light Condition" type="button" class="btn-sm btn-default" href="#">Street Light Condition</button>
+						<button id="Plumbing" type="button" class="btn-sm btn-default" href="#">Plumbing</button>
+						<button id="Allcomplaints" type="button" class="btn-sm btn-default" href="#"> All </button>
+
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- /Section: map -->
+
+
+
+
+	<!-- Section: analysis -->
+    <section id="analysis" class="home-section color-dark bg-gray">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div>
+					<div class="animatedParent">
+					<div class="section-heading text-center animated bounceInDown">
+					<h2 class="h-bold"> Analysis </h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row margintop-50">
+
+				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" align="center">
+
+				<iframe id="heatmap" src="heatmap/all.html" frameborder="0" style='height: 600px ;width:100%';"></iframe>
+
+				</div>
+
+				<div id="LQchart" class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style='height: 600px;'>
+
+				<iframe id="regression1" src="regressions/total15.html" frameborder="0" style='height: 300px; width: 100%';" scrolling="no"></iframe>
+
+				<iframe id="regression2" src="regressions/total16.html" frameborder="0" style='height: 300px; width: 100%';" scrolling="no"></iframe>
+
+				</div>
+
+				<div  class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style='height: 620px;'>
+
+
+
+				<iframe id="analysis-writeup" src="analysistext/all-analysis.html" frameborder="0" style="position: relative; height: 320px; width: 100%;"></iframe>
+				<iframe id="heatanalysis-writeup" src="heatanalysis/all-analysis.html" frameborder="0" style="position: relative; height: 300px; width: 100%;"></iframe>
+
+				</div>
+
+
+
+
+			</div>
+
+			<div class="container marginbot-30 margintop-20">
+				<div class="row col-lg-12" align="center">
+
+
+
+						<button id="Heating2" type="button" class="btn-sm btn-default" href="#">Heating</button>
+						<button id="Illegal Parking2" type="button" class="btn-sm btn-default" href="#">Illegal Parking</button>
+						<button id="Blocked Driveway2" type="button" class="btn-sm btn-default" href="#">Blocked Driveway</button>
+						<button id="Street Condition2" type="button" class="btn-sm btn-default" href="#">Street Condition</button>
+						<button id="Unsanitary Condition2" type="button" class="btn-sm btn-default" href="#">Unsanitary Condition</button>
+						<button id="Water System2" type="button" class="btn-sm btn-default" href="#">Water System</button>
+						<button id="Paint Condition2" type="button" class="btn-sm btn-default" href="#">Paint Condition</button>
+						<button id="Noise2" type="button" class="btn-sm btn-default" href="#">Noise</button>
+						<button id="Street Light Condition2" type="button" class="btn-sm btn-default" href="#">Street Light Condition</button>
+						<button id="Plumbing2" type="button" class="btn-sm btn-default" href="#">Plumbing</button>
+						<button id="Allcomplaints2" type="button" class="btn-sm btn-default" href="#"> All </button>
+
+				</div>
+			</div>
+
+
+				<div class="container marginbot-50 margintop-0">
+				<div class="row col-lg-12" align="center">
+
+			<iframe id="barheatmap2015" src="https://plot.ly/~nuts_nants/8.embed?link=false" frameborder="0" style='height: 380px; width: 33%';" scrolling="no"></iframe>
+
+					<iframe id="barheatmap2016" src="https://plot.ly/~nuts_nants/11.embed?link=false" frameborder="0" style='height: 380px; width: 33%';" scrolling="no"></iframe>
+
+					<iframe id="barheatmapweekday" src="https://plot.ly/~nuts_nants/13.embed?link=false" frameborder="0" style='height: 380px; width: 33%	';" scrolling="no"></iframe>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<iframe src="analysistext/tempheatmap-analysis.html" frameborder="0" style="height: 300px; width: 100%; overflow: hidden;" scrolling="no"></iframe>
+					</div>
+			</div>
+		</div>
+	</section>
+	<!-- /Section: analysis -->
+
+
+
+
+	<!-- Section: data source -->
+    <section id="datasources" class="home-section color-dark bg-white">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div>
+					<div class="animatedParent">
+					<div class="section-heading text-center animated bounceInDown">
+					<h2 class="h-bold"> Data Sources </h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="text-center">
+		<div class="container">
+
+        <div class="row animatedParent">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="animated rotateInDownLeft">
+                <div class="datasources-box">
+					<div class="datasources-icon">
+						<span class="fa fa-laptop fa-2x"></span>
+					</div>
+					<div class="datasources-desc">
+						<h5> NYC311 Data  </h5>
+						<div class="divider-header"></div>
+						<p>
+						All NYC311 Service Requests from 2010 to present provided by the City of New York Open Data Portal.
+						</p>
+						<a href="https://nycopendata.socrata.com/Social-datasourcess/311-datasources-Requests-from-2010-to-Present/erm2-nwe9" target="_blank" class="btn btn-skin">Learn more</a>
+					</div>
+                </div>
+				</div>
+            </div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="animated rotateInDownLeft">
+                <div class="datasources-box">
+					<div class="datasources-icon">
+						<span class="fa fa-laptop fa-2x"></span>
+					</div>
+					<div class="datasources-desc">
+						<h5> NYC Median Income </h5>
+						<div class="divider-header"></div>
+						<p>
+						Median household income data for 2015 and 2016, classified by NYC Neighbourhood Areas.
+						</p>
+						<a href="https://wp.zillowstatic.com/streeteasy/2/StreetEasy-2016-Rent-AffordabilityReport-7e91e8.pdf" target="_blank" class="btn btn-skin">Learn more</a>
+					</div>
+                </div>
+				</div>
+            </div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="animated rotateInDownLeft">
+                <div class="datasources-box">
+					<div class="datasources-icon">
+						<span class="fa fa-laptop fa-2x"></span>
+					</div>
+					<div class="datasources-desc">
+						<h5> NYC Neighbourhood Boundary </h5>
+						<div class="divider-header"></div>
+						<p>
+						Smallest planning unit released as open data by the NYC Planning Department. The 5 boroughs are segmented into a total of 195 neighbourhoods.
+						</p>
+						<a href="https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-nynta.page" target="_blank" class="btn btn-skin">Learn more</a>
+					</div>
+                </div>
+				</div>
+            </div>
+
+
+
+
+        </div>
+		</div>
+		</div>
+	</section>
+	<!-- /Section: the data -->
+
+
+
+	<!-- Section: the team -->
+    <section id="team" class="home-section color-dark text-center bg-gray">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div>
+					<div class="animatedParent">
+					<div class="section-heading text-center animated bounceInDown">
+					<h2 class="h-bold animated bounceInDown"> The Team </h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container">
+
+            <div class="row animatedParent">
+                <div class="col-sm-12 col-md-12 col-lg-12" >
+
+                    <!--div class="row gallery-item"-->
+                        <div class="col-md-3 col-sm-6 col-xs-6 animated fadeInUp">
+							<h5> Alvin Yeo </h5>
+							<a href="https://www.linkedin.com/in/alvinyeowk/" target="_blank">
+								<img src="img/boy1.png" class="img-responsive" alt="img" style="width:100%">
+							</a>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-6 animated fadeInUp slow">
+							<h5> Huang Yu-Che </h5>
+							<a href="https://www.linkedin.com/in/huang1129/" target="_blank">
+								<img src="img/boy2.png" class="img-responsive" alt="img" style="width:100%">
+							</a>
+						</div>
+
+
+
+						<div class="col-md-3 col-sm-6 col-xs-6 animated fadeInUp slower">
+
+							<h5> Ma Siyuan </h5>
+							<a href="https://www.linkedin.com/in/siyuan-ma-4393b156/" target="_blank">
+								<img src= "img/boy3.png" class="img-responsive" alt="img" style="width:100%">
+							</a>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-6 animated fadeInUp">
+							<h5> Nantia Spanou </h5>
+							<a href="https://www.linkedin.com/in/spanouk/" target="_blank">
+								<img src="img/girl.png" class="img-responsive" alt="img" style="width:100%">
+							</a>
+						</div>
+
+					<!--/div-->
+
+                </div>
+            </div>
+		</div>
+
+	</section>
+	<!-- /Section: the team  -->
+
+	<!-- Section: API -->
+    <section id="api" class="home-section color-dark bg-white">
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="animatedParent">
+					<div class="section-heading text-center animated bounceInDown">
+					<h2 class="h-bold"> API Documentation </h2>
+					<div class="divider-header"></div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container">
+
+
+        <div class="row">
+
+
+
+            <div class="col-lg-8 col-lg-offset-2 animatedParent">
+				<div class="text-center">
+					<p>
+					Our API allows you to fetch data of the various data source all in one location. The API also provide access to our visualisation (i.e GeoJSON files) and analysis (i.e LQ) results. Click on the link to view the API documentation.
+
+					</p>
+
+					<a href="https://dev.spatialdatacapture.org:8893" target="_blank" class="btn btn-skin btn-scroll"> Go to API </a>
+				</div>
+            </div>
+
+
+        </div>
+		</div>
+
+	</section>
+
+	<!-- /Section: API -->
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 text-left">
+					<ul class="footer-menu">
+						<p> #NYCWakeUpCall was developed for MSc Smart Cities and Urban Analytics course at CASA UCL <p>
+					</ul>
+				</div>
+				<div class="col-md-3 text-right">
+					<p>&copy; Theme by <a href="https://bootstrapmade.com/" target="_blank"> BootstrapMade</a></p>
+                    </div>
+			</div>
+		</div>
+	</footer>
+
+    <!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/nivo-lightbox.min.js"></script>
+
+    <script src="js/custom.js"></script>
+	<script src="js/css3-animate-it.js"></script>
+
+	<!-- map style js -->
+	<script type='text/javascript' src='js/mapstyle.js'></script>
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+	<script type="text/javascript" src="js/a.jquery.min.js"> </script>
+	<script type='text/javascript' src='js/xdate.js'></script>
+
+
+
+<!-- map buttons script -->
+
+<script>
+
+document.getElementById("Heating").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/izumovu');
+	$("#mapcontainer").attr("src", 'maps/map-container-heating.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/acyfuhu');
+}
+
+document.getElementById("Illegal Parking").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/oxelyje');
+	$("#mapcontainer").attr("src", 'maps/map-container-parking.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/avageqe');
+}
+document.getElementById("Blocked Driveway").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/ylecasy');
+	$("#mapcontainer").attr("src", 'maps/map-container-block.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/iforeko');
+}
+document.getElementById("Street Condition").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/usylucu');
+	$("#mapcontainer").attr("src", 'maps/map-container-street.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/orylopi');
+}
+document.getElementById("Unsanitary Condition").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/izykidu');
+	$("#mapcontainer").attr("src", 'maps/map-container-unsanitary.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/uparuba');
+}
+document.getElementById("Water System").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/ikabine');
+	$("#mapcontainer").attr("src", 'maps/map-container-water.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/otywoxa');
+}
+document.getElementById("Paint Condition").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/okeduvi');
+	$("#mapcontainer").attr("src", 'maps/map-container-paint.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/azipiho');
+}
+document.getElementById("Noise").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/ubapaha');
+	$("#mapcontainer").attr("src", 'maps/map-container-noise.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/uvoleni');
+}
+document.getElementById("Street Light Condition").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/ororejy');
+	$("#mapcontainer").attr("src", 'maps/map-container-streetlight.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/umitidi');
+}
+document.getElementById("Plumbing").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/egitecu');
+	$("#mapcontainer").attr("src", 'maps/map-container-plumbing.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/ofypijy');
+}
+document.getElementById("Allcomplaints").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/yjememy');
+	$("#mapcontainer").attr("src", 'maps/map-container-total.html');
+	$("#time-highchart").attr("src", 'https://cloud.highcharts.com/embed/ijimesa');
+}
+
+document.getElementById("2015").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/ilupilo');
+	$("#mapcontainer").attr("src", 'maps/map-container-cluster15.html');
+}
+
+document.getElementById("2016").onclick = function() {
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/iqytopy');
+	$("#mapcontainer").attr("src", 'maps/map-container-cluster16.html');
+
+}
+
+
+document.getElementById("income").onclick = function() {
+	$("#mapcontainer").attr("src", 'maps/map-container-income.html');
+	$("#bar-highchart").attr("src", 'https://cloud.highcharts.com/embed/ehojybi');
+}
+
+
+</script>
+
+<!-- map buttons script -->
+
+
+<!-- analysis regression chart buttons script -->
+
+<script>
+
+document.getElementById("Heating2").onclick = function() {
+
+	 $("#analysis-writeup").attr("src", 'analysistext/heating-analysis.html');
+	 $("#heatanalysis-writeup").attr("src", 'heatanalysis/heating-analysis.html');
+	 $("#heatmap").attr("src", 'heatmap/heat.html');
+	 $("#regression1").attr("src", 'regressions/heating15.html');
+	 $("#regression2").attr("src", 'regressions/heating16.html');
+
+
+
+}
+
+document.getElementById("Illegal Parking2").onclick = function() {
+	$("#analysis-writeup").attr("src", 'analysistext/parking-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/parking-analysis.html');
+	$("#heatmap").attr("src", 'heatmap/parking.html');
+	$("#regression1").attr("src", 'regressions/park15.html');
+	 $("#regression2").attr("src", 'regressions/park16.html');
+}
+document.getElementById("Blocked Driveway2").onclick = function() {
+
+	$("#analysis-writeup").attr("src", 'analysistext/blocked-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/blocked-analysis.html');
+	$("#heatmap").attr("src", 'heatmap/driveway.html');
+	$("#regression1").attr("src", 'regressions/blockdrive15.html');
+	 $("#regression2").attr("src", 'regressions/blockdrive16.html');
+}
+document.getElementById("Street Condition2").onclick = function() {
+	$("#analysis-writeup").attr("src", 'analysistext/street-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/street-analysis.html');
+
+	$("#heatmap").attr("src", 'heatmap/street.html');
+	$("#regression1").attr("src", 'regressions/street15.html');
+	 $("#regression2").attr("src", 'regressions/street16.html');
+}
+document.getElementById("Unsanitary Condition2").onclick = function() {
+	$("#analysis-writeup").attr("src", 'analysistext/unsan-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/unsan-analysis.html');
+	$("#heatmap").attr("src", 'heatmap/unsanitary.html');
+	$("#regression1").attr("src", 'regressions/unsan15.html');
+	 $("#regression2").attr("src", 'regressions/unsan16.html');
+}
+document.getElementById("Water System2").onclick = function() {
+	$("#analysis-writeup").attr("src", 'analysistext/water-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/water-analysis.html');
+	$("#heatmap").attr("src", 'heatmap/water.html');
+	$("#regression1").attr("src", 'regressions/water15.html');
+	 $("#regression2").attr("src", 'regressions/water16.html');
+}
+document.getElementById("Paint Condition2").onclick = function() {
+
+	$("#heatmap").attr("src", 'heatmap/paint.html');
+	$("#analysis-writeup").attr("src", 'analysistext/paint-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/paint-analysis.html');
+	$("#regression1").attr("src", 'regressions/paint15.html');
+	 $("#regression2").attr("src", 'regressions/paint16.html');
+}
+document.getElementById("Noise2").onclick = function() {
+	$("#analysis-writeup").attr("src", 'analysistext/noise-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/noise-analysis.html');
+	$("#heatmap").attr("src", 'heatmap/noise.html');
+	$("#regression1").attr("src", 'regressions/noise15.html');
+	 $("#regression2").attr("src", 'regressions/noise16.html');
+}
+document.getElementById("Street Light Condition2").onclick = function() {
+	$("#analysis-writeup").attr("src", 'analysistext/slight-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/slight-analysis.html');
+	$("#heatmap").attr("src", 'heatmap/streetlight.html');
+	$("#regression1").attr("src", 'regressions/strlight15.html');
+	 $("#regression2").attr("src", 'regressions/strlight16.html');
+}
+document.getElementById("Plumbing2").onclick = function() {
+
+	$("#analysis-writeup").attr("src", 'analysistext/plumbing-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/plumbing-analysis.html');
+	$("#heatmap").attr("src", 'heatmap/plumbing.html');
+	$("#regression1").attr("src", 'regressions/plumbing15.html');
+	 $("#regression2").attr("src", 'regressions/plumbing16.html');
+}
+
+document.getElementById("Allcomplaints2").onclick = function() {
+
+	$("#analysis-writeup").attr("src", 'analysistext/all-analysis.html');
+	$("#heatanalysis-writeup").attr("src", 'heatanalysis/all-analysis.html');
+	$("#heatmap").attr("src", 'heatmap/all.html');
+	$("#regression1").attr("src", 'regressions/total15.html');
+	 $("#regression2").attr("src", 'regressions/total16.html');
+}
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
